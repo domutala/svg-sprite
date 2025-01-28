@@ -22,6 +22,7 @@ export interface ModuleOptions {
   output: string
   iconsPath: string
   defaultSprite: string
+  componentName: 'SvgIcon'
   optimizeOptions: SVGOConfig
 }
 
@@ -38,7 +39,7 @@ export default defineNuxtModule<ModuleOptions>({
     output: '~/assets/sprite/gen',
     defaultSprite: 'icons',
     iconsPath: '/_icons',
-    componentName: 'SvgIcon', 
+    componentName: 'SvgIcon',
     optimizeOptions: {
       plugins: [
         {
