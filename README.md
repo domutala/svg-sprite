@@ -62,6 +62,7 @@ Module default options:
 | output | `~/assets/sprite/gen` | Directory to store generated sprites |
 | defaultSprite | `icons` | Name of default sprite (default sprite consist of all svgs that place directly inside `input` directory) |
 | elementClass | `icon` | global class of all `<svg-icon>` instances |
+| componentName | `SvgIcon` | Name of the globally registered Vue component used to render SVG icons. |
 | spriteClassPrefix | `sprite-` | Prefix of sprite specific classes |
 | publicPath | `null` | Specifies a custom public path for the sprites |
 | iconsPath | `_icons` | Custom path for icons list page (In order to disable this page, pass `false` or `null` to this option) |

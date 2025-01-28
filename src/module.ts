@@ -38,6 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
     output: '~/assets/sprite/gen',
     defaultSprite: 'icons',
     iconsPath: '/_icons',
+    componentName: 'SvgIcon', 
     optimizeOptions: {
       plugins: [
         {
@@ -78,7 +79,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     const logger = useLogger('svg-sprite')
 
-    await addComponent({ name: 'SvgIcon', filePath: resolve('./runtime/components/svg-icon.vue'), global: true })
+    await addComponent({ name: options.componentName, filePath: resolve('./runtime/components/svg-icon.vue'), global: true })
     if (nuxt.options.dev) {
       nuxt.options.runtimeConfig.svgSprite = { inputDir, defaultSprite: options.defaultSprite }
       addServerHandler({ route: '/api/svg-sprite/generate', handler: resolve('./runtime/server/generate') })
